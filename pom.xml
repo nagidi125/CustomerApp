@@ -325,54 +325,34 @@
 				<phase>package</phase> <goals> <goal>report</goal> </goals> </execution> 
 				</executions> </plugin> -->
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>com.alexecollins.docker</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<configuration>
-					<!-- out of the box, you shoud not need to have these, as they'll use 
-						sensible defaults -->
-					<!-- (optional) your installed version -->
-					<version>1.13</version>
-					<!-- (optional) if you want to push to a private repo, all of these 
-						are required if using artifactory -->
+					<version>1.13</version>					
 					<username>alexec</username>
 					<password>password</password>
 					<email>alex.e.c@gmail.com</email>
 					<serverAddress>https://index.docker.io/v1/</serverAddress>
-					<!-- (optional) change here if you are using another port/host, e.g. 
-						4243 -->
-					<host>http://localhost:2375</host>
-					<!-- (optional) if you need to run with configured SSL certificates -->
-					<dockerCertPath>${user.home}/.docker</dockerCertPath>
-					<!-- (optional) remove images created by Dockerfile (default false) -->
-					<removeIntermediateImages>false</removeIntermediateImages>
-					<!-- (optional) do/do not cache images (default true), disable to get 
-						the freshest images -->
-					<cache>true</cache>
-					<!-- (optional) exclude certain images -->
-					<exclude>app,other</exclude>
-					<!-- (optional) ignore problems with permission errors (e.g. if running 
-						on CircleCI -->
-					<permissionErrorTolerant>true</permissionErrorTolerant>
-					<!-- (optional) only remove containers on clean, do not remove images -->
-					<cleanContainerOnly>false</cleanContainerOnly>
-					<!-- (optional) where to same images -->
-					<saveDir>target/docker</saveDir>
-					<!-- (optional) save files to reduce disk space usage -->
-					<gzipSave>false</gzipSave>
-					<!-- (optional) attached saved files for deployment to local repo or 
-						Maven repo -->
+					<host>http://localhost:2375</host>					
+					<dockerCertPath>${user.home}/.docker</dockerCertPath>					
+					<removeIntermediateImages>false</removeIntermediateImages>					
+					<cache>true</cache>					
+					<exclude>app,other</exclude>					
+					<permissionErrorTolerant>true</permissionErrorTolerant>					
+					<cleanContainerOnly>false</cleanContainerOnly>					
+					<saveDir>target/docker</saveDir>					
+					<gzipSave>false</gzipSave>					
 					<attach>false</attach>
 				</configuration>
 				<dependencies>
-					<dependency>
-						<!-- set-up port forwarding if you're using boot2docker -->
+					<dependency>						
 						<groupId>com.alexecollins.docker</groupId>
 						<artifactId>docker-java-orchestration-plugin-boot2docker</artifactId>
 						<version></version>
 					</dependency>
 				</dependencies>
-			</plugin>
+			</plugin> -->
 
 		</plugins>
 	</build>
@@ -386,7 +366,7 @@
 		</plugins>
 	</reporting>
 	<profiles>
-		<profile>
+		<!-- <profile>
 			<id>docker</id>
 			<activation>
 				<file>
@@ -438,6 +418,6 @@
 					</plugin>
 				</plugins>
 			</build>
-		</profile>
+		</profile> -->
 	</profiles>
 </project>
